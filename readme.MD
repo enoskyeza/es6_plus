@@ -1,5 +1,7 @@
 # Started ES6 scrimba course
 
+# Template listerals
+
 # Focusing on "Git Flow" as well.
 
 ## Git Flow Workflow:
