@@ -1,6 +1,7 @@
 # Started ES6 scrimba course
 
-# Focusing on "Git Flow" as well.
+## Template listerals
+
 
 ## Git Flow Workflow:
     The Git Flow workflow is a branching model designed for larger projects that involve release management. It defines specific branches for various types of work and promotes a structured approach to development.
