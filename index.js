@@ -242,7 +242,7 @@ console.log(example)    -   this throws an error
 
 /* Export & Imports */
 
-import { data } from './example.js'
+import { data, addition } from './example.js'
 
 console.log(data)
 
@@ -250,3 +250,19 @@ let updatedData = data
 
 updatedData.push(5)
 console.log(updatedData)
+
+/*
+
+**Challenge**
+
+Inside of the file data.js, create a function add, that will receive 2 numbers and return the sum of them.
+Make sure to export this function.
+
+- Import the function add, into the index.js file
+- Create a variable result, that will hold the result of the function add when you call it and pass 2 numbers into it.
+- print into the console the value of the variable result;
+
+*/
+
+let sumation = addition(4, 6)
+console.log(sumation)
