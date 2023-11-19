@@ -266,3 +266,13 @@ Make sure to export this function.
 
 let sumation = addition(4, 6)
 console.log(sumation)
+
+/*
+padStart() & padEnd()
+    add value to start or end of the string
+*/
+
+let example = 'YouTube.com/CodingTutorials360';
+
+// console.log(example.padStart(100));
+// console.log(example.padEnd(1));
