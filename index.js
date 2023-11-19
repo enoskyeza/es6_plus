@@ -276,3 +276,50 @@ let example = 'YouTube.com/CodingTutorials360';
 
 // console.log(example.padStart(100));
 // console.log(example.padEnd(1));
+
+/*
+Classes
+
+class Animal {
+    constructor(type, legs) {
+        this.type = type
+        this.legs = legs
+    }
+
+    makeNoise(sound = 'loud noise') {
+        console.log(sound)
+    }
+
+    get metaData() {
+        return `Type: this.type, Legs: this.legs`
+    }
+
+    static return10() {         >> works without creating a class instance
+        return 10
+    }
+}
+
+let cat = new Animal('cat', 4)
+
+
+**Classes Challenge**:
+
+Create a class Player with the following:
+- Add a Name and Country properties
+- Add a function that when it runs should print into the console ("Messi was born in Argentina");
+- Make sure to adapt this function to receive dynamic Names and Clubs.
+
+Create a Subclass called TennisPlayer that extends from the class Player
+- Add a new property Age.
+- Add a function that when it runs should print into the console something similar ("Rafael Nadal is 34 years old and knows how to play Tennis");
+- Make sure the Name and Age are dynamic.
+
+*/
+
+import { Player, TennisPlayer } from './player.js'
+
+let player_one = new Player('Messi', 'Argentina')
+let player_two = new TennisPlayer('Rafael Nadal', 'India', 34)
+
+console.log(player_one.playerBio())
+console.log(player_two.playerBio())
