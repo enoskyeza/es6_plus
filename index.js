@@ -193,3 +193,76 @@ const dinnerFood = (food='milk') => {
 }
 dinnerFood('chicken')
 
+
+/*
+    ** includes() Challenge
+        * You want to make a chocolate cake
+        * And you have a list of ingredients represented with an array
+        * Using the JavaScript includes() function
+        * Check if you have the ingredient chocolate in your list of ingredients, and print into the console "We are going to make a chocolate cake" if you have it
+        * Else print into the console "We can't make a chocolate cake because we are missing the ingredient chocolate"
+*/
+
+
+const listIngredients =  [ "flour", "sugar", "eggs", "butter" ];
+
+if (listIngredients.includes('chocolate')) {
+    console.log("We are going to make a chocolate cake")
+} else {
+    console.log("We can't make a chocolate cake because we are missing the ingredient chocolate")
+}
+
+/*
+Let & Const
+
+if (false) {
+    var example = 5;
+}
+
+console.log(example)
+
+var example;
+
+if (false) {
+    example = 5;
+}
+
+ -------
+
+if (false) {
+    let example = 5;
+}
+
+console.log(example)    -   this throws an error
+
+>> const doesnt work on arrays or on objects
+
+*/
+
+
+/* Export & Imports */
+
+import { data, addition } from './example.js'
+
+console.log(data)
+
+let updatedData = data
+
+updatedData.push(5)
+console.log(updatedData)
+
+/*
+
+**Challenge**
+
+Inside of the file data.js, create a function add, that will receive 2 numbers and return the sum of them.
+Make sure to export this function.
+
+- Import the function add, into the index.js file
+- Create a variable result, that will hold the result of the function add when you call it and pass 2 numbers into it.
+- print into the console the value of the variable result;
+
+*/
+
+let sumation = addition(4, 6)
+console.log(sumation)
