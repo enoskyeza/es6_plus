@@ -211,3 +211,31 @@ if (listIngredients.includes('chocolate')) {
 } else {
     console.log("We can't make a chocolate cake because we are missing the ingredient chocolate")
 }
+
+/*
+Let & Const
+
+if (false) {
+    var example = 5;
+}
+
+console.log(example)
+
+var example;
+
+if (false) {
+    example = 5;
+}
+
+ -------
+
+if (false) {
+    let example = 5;
+}
+
+console.log(example)    -   this throws an error
+
+>> const doesnt work on arrays or on objects
+
+*/
+
