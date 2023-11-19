@@ -239,3 +239,14 @@ console.log(example)    -   this throws an error
 
 */
 
+
+/* Export & Imports */
+
+import { data } from './example.js'
+
+console.log(data)
+
+let updatedData = data
+
+updatedData.push(5)
+console.log(updatedData)
