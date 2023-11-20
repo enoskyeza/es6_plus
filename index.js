@@ -323,3 +323,119 @@ let player_two = new TennisPlayer('Rafael Nadal', 'India', 34)
 
 console.log(player_one.playerBio())
 console.log(player_two.playerBio())
+
+
+/*
+Promises
+
+const buyFlightTicket = () => {
+    return new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            const error = false;
+
+            if( error ) {
+                reject("Sorry your payment was not successful")
+            } else {
+                resolve("Thank you, your payment was successful");
+            }
+        }, 3000)
+    })
+}
+
+buyFlightTicket()
+.then( (success) => console.log(success))
+.catch( (error) => console.log(error) );
+
+*/
+
+const userData = new Promise((resolve, reject) => {
+    const error = false;
+
+    if(error) {
+        reject('500 Level Error');
+    } else {
+        resolve({
+            firstName: 'Dylan',
+            age: 32,
+            email: 'DylansEmail310@gmail.com'
+        });
+    }
+});
+
+userData
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+
+
+
+/*
+/**
+ * Fetch - Challenge
+ *
+ * GET the first comments value 'https://jsonplaceholder.typicode.com/comments/1' and log its value.
+ * POST a new comment using 'https://jsonplaceholder.typicode.com/comments' and log its value.
+ *
+ * RESTFul API Guide - https://jsonplaceholder.typicode.com/guide.html
+ * Docs - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+ *
+ * RESTFul API - https://jsonplaceholder.typicode.com/
+ * Docs - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+
+fetch('https://jsonplaceholder.typicode.com/comments/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
+
+
+fetch('https://jsonplaceholder.typicode.com/comments', {
+        method: "POST",
+        body: JSON.stringify({
+            postId: 1,
+            name: 'Dylan',
+            email: 'dylansemail310@gmail.com',
+            body: 'That was dope!'
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+*/
+
+/*
+Async & Await
+const photos = [];
+
+async function photoUpload() {
+    let uploadStatus = new Promise( (resolve, reject) => {
+        setTimeout( () => {
+            photos.push("Profile Pic");
+            resolve("Photo Uploaded")
+        }, 3000)
+    })
+
+    let result = await uploadStatus;
+
+    console.log(result);
+    console.log(photos.length);
+}
+
+photoUpload();
+
+*/
+
+
+//Challenge - Async & Await
+
+//Print on the console a random joke from the Chuck Norris API using Fetch and Async and Await
+
+const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+async function getJoke() {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    // console.log(data.value);
+    console.log(data.value);
+
+}
+
+getJoke();
